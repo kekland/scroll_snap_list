@@ -300,12 +300,6 @@ class ScrollSnapListState extends State<ScrollSnapList> {
     if (widget.onReachEnd != null) widget.onReachEnd!();
   }
 
-  @override
-  void dispose() {
-    widget.listController.dispose();
-    super.dispose();
-  }
-
   /// Calculate List Padding by checking SelectedItemAnchor
   double calculateListPadding(BoxConstraints constraint) {
     switch (widget.selectedItemAnchor) {
